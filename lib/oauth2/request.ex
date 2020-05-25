@@ -19,7 +19,7 @@ defmodule OAuth2.Request do
     content_type = content_type(headers)
     serializer = Client.get_serializer(client, content_type)
     body = encode_request_body(body, content_type, serializer)
-    headers = process_request_headers(headers, content_type)
+    # headers = process_request_headers(headers, content_type)
     req_opts = Keyword.merge(client.request_opts, opts)
 
     if Application.get_env(:oauth2, :debug) do
