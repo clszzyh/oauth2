@@ -30,14 +30,14 @@ defmodule OAuth2.Mixfile do
 
   defp deps do
     [
-      {:hackney, "~> 1.13"},
+      {:hackney, "~> 1.15"},
 
       # Test dependencies
-      {:jason, "~> 1.0", only: [:dev, :test]},
-      {:bypass, "~> 0.9", only: :test},
-      {:plug_cowboy, "~> 1.0", only: :test},
+      {:jason, "~> 1.2.0"},
+      {:bypass, "~> 1.0", only: :test},
+      {:plug_cowboy, "~> 2.2", only: :test},
       {:excoveralls, "~> 0.9", only: :test},
-      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.4.0", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0.0-rc.6", only: [:dev], runtime: false},
 
       # Docs dependencies
